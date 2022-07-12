@@ -9,9 +9,14 @@ Product.Create("Divano", 500, "descrizione divano");*/
 //Customer.Create("Marco", "Rossi", "marco@rossi.com");
 
 
-using (EcommerceContext db = new EcommerceContext())
+
+  ////////////////
+ ////ADD ORDER //
+////////////////
+
+/*using (EcommerceContext db = new EcommerceContext())
 {
-    Customer customer = db.Customers.Where(customer => customer.Id == 1).First();
+    Customer customer = db.Customers.Where(customer => customer.Id == 2).First();
     List<Product> products = db.Products.ToList();
     Order order = new Order { CustomerId = customer.Id, Date = DateTime.Now, Status = "in corso", Products = products };
     db.Add(order);
@@ -25,7 +30,30 @@ using (EcommerceContext db = new EcommerceContext())
     }
 
     db.SaveChanges();
+}*/
+
+
+
+  //////////////////////////
+ /// RETRIVE ORDER LIST ///
+//////////////////////////
+
+using(EcommerceContext db = new EcommerceContext())
+{
+    List<Order> orders = db.Orders.Where(order => order.CustomerId == 2).ToList();
+    Console.WriteLine("date \t\t\tamount");
+    foreach (Order order in orders)
+    {
+        Console.WriteLine(order.Date + "\t" + order.Amount);
+    }
 }
+
+
+
+
+  ////////////////////////
+ ///DELETE ALL ORDERS ///
+////////////////////////
 
 //using (EcommerceContext db = new EcommerceContext())
 //{
