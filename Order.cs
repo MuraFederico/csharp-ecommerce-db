@@ -14,7 +14,7 @@ public class Order
     public DateTime Date { get; set; }
 
     [Required]
-    [Column(TypeName = "decimal(5, 2)")]
+    [Column(TypeName = "decimal(8, 2)")]
     public decimal Amount { get; set; }
 
     [Required]
