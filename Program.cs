@@ -5,3 +5,4 @@ Product.Create("Lampada", 20, "descrizione lampada");
 Product.Create("Divano", 500, "descrizione divano");*/
 
 
+Customer.Create("Federico", "Mura", "federico@mura.com");
