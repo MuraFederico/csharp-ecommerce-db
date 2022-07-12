@@ -6,6 +6,7 @@ public class EcommerceContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<Customer> Customers { get; set; }
 
+    /*public DbSet<OrderProduct> OrdersProducts { get; set; }*/
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Order>()

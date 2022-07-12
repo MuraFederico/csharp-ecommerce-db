@@ -27,5 +27,7 @@ public class Order
     public List<Product> Products { get; set; }
 
     public List<OrderProduct> OrderProducts { get; set; }
+
+
 }
 
